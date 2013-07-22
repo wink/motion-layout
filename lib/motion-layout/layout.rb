@@ -45,12 +45,12 @@ module Motion
     def vertical(vertical, *options)
       @verticals << [vertical, options_bitmask(*options)]
     end
+
+    private
     
     def options_bitmask(*options)
       options.map { |o| o.is_a?(Integer) ? o : LAYOUT_FORMAT_OPTIONS[o] || 0 }.inject(:|)
     end
-
-    private
 
     def strain
       @subviews.values.each do |subview|
