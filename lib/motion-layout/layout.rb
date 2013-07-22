@@ -49,6 +49,7 @@ module Motion
     private
     
     def options_bitmask(*options)
+      return 0 if options.empty?
       options.map { |o| o.is_a?(Integer) ? o : LAYOUT_FORMAT_OPTIONS[o] || 0 }.inject(:|)
     end
 
