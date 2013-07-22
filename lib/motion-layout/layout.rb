@@ -21,11 +21,11 @@ module Motion
       @view = view
     end
 
-    def horizontal(horizontal, options = NSLayoutFormatAlignAllCenterY)
+    def horizontal(horizontal, options = 0)
       @horizontals << [horizontal, options]
     end
 
-    def vertical(vertical, options = NSLayoutFormatAlignAllCenterX)
+    def vertical(vertical, options = 0)
       @verticals << [vertical, options]
     end
 
